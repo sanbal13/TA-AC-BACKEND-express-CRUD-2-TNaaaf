@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Article Detail</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header>
+        <div class="flex navigation">
+            <a href="/">
+                <h2>
+                    Blog
+                </h2>
+            </a>
+        <a href ='/articles' class='button'> Show articles </a>
+        </div>
+    </header>
+        
+    <main>      
+        <ul class="article-card-detail">
+            <li>Title: <%= article.title%></li>
+            <li>Description: <%= article.description%></li>
+            <li>Tags: <%= article.tags%></li>
+            <li>Author: <%= article.author%></li>
+            <li>Likes: <%= article.likes%></li>
+            <a href='/articles/<%= article.id %>/edit' class="button"> Like</a>
+            <a href='/articles/<%= article.id %>/edit' class="button"> Edit</a>
+            <a href='/articles/<%= article.id %>/delete' class="button"> Delete</a>
+            
+        </ul> 
+    </main>
+</body>
+</html>
+
