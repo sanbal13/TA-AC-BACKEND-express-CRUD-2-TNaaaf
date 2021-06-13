@@ -185,5 +185,22 @@ button:hover {
     color: #fff;
     background-color: #B45309;
 }
+.tag {
+    background-color: yellow;
+    box-shadow: inset 1px 1px 20px grey;
+    margin: .2rem;
+    display: inline-block;
+    padding: .1rem .5rem;
+}
+.like, .dislike {
+    background-color: green;
+    padding: .1rem .2rem;
+    border-radius: 0;
+
+}
+.dislike {
+    background-color: red;
+}
+
 
 /************** Footer **************/
