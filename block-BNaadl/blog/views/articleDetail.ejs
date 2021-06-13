@@ -24,12 +24,22 @@
         <ul class="article-card-detail">
             <li>Title: <%= article.title%></li>
             <li>Description: <%= article.description%></li>
-            <li>Tags: <%= article.tags%></li>
+            <li>Tags: <ul>
+                <% article.tags.forEach((tag) => { %>
+                   <li class = "tag"> <%= tag %></li>
+                <% }) %>
+            </ul>            
+            </li>
             <li>Author: <%= article.author%></li>
             <li>Likes: <%= article.likes%></li>
-            <a href='/articles/<%= article.id %>/edit' class="button"> Like</a>
+
             <a href='/articles/<%= article.id %>/edit' class="button"> Edit</a>
             <a href='/articles/<%= article.id %>/delete' class="button"> Delete</a>
+            
+            <div class="likes">
+                <a href='/articles/<%= article.id %>/like' class="button like"> Like</a>
+                <a href='/articles/<%= article.id %>/dislike' class="button dislike"> Dislike</a>
+            </div>
             
         </ul> 
     </main>

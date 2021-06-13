@@ -21,6 +21,7 @@
     </header>
         
     <main>
+        <% if(articles.length > 0) { %>
        <ol>
            <% articles.forEach((article) => { %>
             <li>
@@ -31,6 +32,9 @@
             </li>
            <% }) %>
        </ol>
+    <% }  else {  %>
+      <h3>No Articles Present</h3>
+    <% } %>
     </main>
 </body>
-</html>
+</html> 
