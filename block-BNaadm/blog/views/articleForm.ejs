@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Form</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header>
+        <div class="flex navigation">
+            <a href="/">
+            <h3>
+                Blog
+            </h3>
+            </a>
+            <a href="/articles" class="button">Show Articles</a>
+        </div>
+    </header>
+    <main>
+    <h3>Article Form</h3>
+    <form action="/articles" method="post" class="form-container">
+        <input type="text" name="title" id="title" placeholder="Enter title ">
+        <textarea name="description" id="description" cols="30" rows="10" placeholder="Enter description"></textarea>
+        <input type="text" name="tags" id="tags" placeholder="Enter tags">
+        <input type="text" name="author" id="author" placeholder="Enter author name">
+        <button type="submit">Add Article</button>
+    </form>
+</main>
+</body>
+</html>

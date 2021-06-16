@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header>
+        <div class="flex navigation">
+            <a href="/">
+            <h3>
+                Blog
+            </h3>
+            </a>
+            <a href="/articles" class="button">Show Articles</a>
+        </div>
+    </header>
+    <main>             
+            <div class = "article-card-detail" >
+                <ul>
+                <li><span class="title">Title: </span><%= article.title %></li>  
+                 <li><span class="title">Description: </span><%= article.description %></li>
+                 <li><span class="title">Tags: </span><% article.tags.forEach((tag) => { %>
+                                                      <li class="tag"><%= tag %></li>  
+                                                      <% }) %></li>
+                 <li><span class="title">Author: </span><%= article.author %></li>
+                 <li><span class="title">Likes: </span><%= article.likes %></li>  
+                </ul>     
+                 <a href="/articles/<%= article.id%>/edit" class="button">Edit</a>
+                 <a href="/articles/<%= article.id%>/delete" class="button">Delete</a>
+                 <br>
+                 <a href="/articles/<%= article.id%>/likes" class="button like">Like</a>
+                 <a href="/articles/<%= article.id%>/dislikes" class="button dislike">Dislike</a>
+                 
+                 <form action="/articles/<%= article.id%>/comment" method="post">
+                 <textarea name="content" id="content" cols="30" rows="10" placeholder="Enter Comment"></textarea>
+                 <button type="submit">Submit comment</button>
+                </form>
+
+                 <div class="comments-section">
+                     <h4 class="comment-heading">Comments</h4>
+                     <ul>
+                         <% article.comments.forEach((comment) => { %>
+                            <li class = "comment">
+                                <%= comment.content %> <br>
+                                <a href="/comments/<%= comment.id%>/edit" class="button">Edit</a>
+                                <a href="/comments/<%= comment.id%>/delete" class="button">Delete</a>
+                            </li>
+                         <% }) %>
+                        </ul>
+
+                 </div>
+                 </div>     
+    </main>
+</body>
+</html>
