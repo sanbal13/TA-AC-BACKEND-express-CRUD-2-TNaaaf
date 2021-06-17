@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header>
+        <div class="flex navigation">
+            <a href="/">
+            <h3>
+                Blog
+            </h3>
+            </a>
+            <a href="/articles/new" class="button">Add Article</a>
+        </div>
+    </header>
+    <main>     
+        <ol style = "margin-top: 5rem;">
+        <% articles.forEach((article) => { %>
+            <li>
+            <ul class = "article-card-brief" >
+                <li><a href="/articles/<%= article.id%>" style="color: brown"><%= article.title %></a></li>                
+            </ul>
+        </li>
+        <% }) %>    
+    </ol> 
+    </main>
+</body>
+</html>
