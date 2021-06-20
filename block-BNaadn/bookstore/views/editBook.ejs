@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="flex navigation">
+            <a href='/'>
+            <h3>
+            BookStore
+            </h3>    
+            </a>
+            <a href='/books' class="button">
+            Show Books
+            </a>
+        </div>
+    </header>
+    <main>
+        <h3>Edit Book Form</h3>
+        <form action="/books/<%= book.id %>" method="post" class="form-container">
+        <input type="text" name="title" id="title" placeholder = "Enter the title" value="<%= book.title %>"> 
+        <textarea name="summary" id="summary" cols="30" rows="10" placeholder = "Enter the summary"><%= book.summary %></textarea>
+        <input type="number" name="pages" id="pages" placeholder="Enter the no. of pages" value="<%= book.pages %>">
+        <input type="text" name="publication" id="publication" placeholder=" Enter the publication name" value="<%= book.publication %>">
+        <textarea name="category" id="category" cols="30" rows="10"><%= book.category.join(" ") %></textarea>
+        <input type="text" name="name" id="author-name" placeholder = "Enter the author name" value="<%= book.authorId.name %>"> 
+        <input type="text" name="email" id="author-email" placeholder = "Enter the author email" value="<%= book.authorId.email %>"> 
+        <input type="text" name="country" id="author-country" placeholder = "Enter the author country" value="<%= book.authorId.country %>"> 
+        <input type="text" name="image-link"  id="image-link" placeholder="Enter image link">     
+        
+        <button type="submit">Edit Book</button>
+        </form>
+    </main>
+</body>
+</html>
+

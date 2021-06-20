@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="flex navigation">
+            <a href='/'>
+            <h3>
+            BookStore
+            </h3>    
+            </a>
+            <a href='/books/new' class="button">
+            Add Book
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="search-box">
+            <form action="/books/filter" method="post">
+                <select name="choice" id="choice">
+                    <option value="book-name">Book name</option>
+                    <option value="author">Author</option>
+                    <option value="category">Category</option>
+                </select>
+                <input type="text" name="choiceValue" id="choice-value">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <ol>
+            <% books.forEach((book) => { %>
+                <li>
+                    <ul class="book-card">
+                        <li><span class="heading">Title: </span><%= book.title %></li>
+                        <a href = '/books/<%= book.id%>' class='button' style="margin-top: 1rem; display: block;">
+                            Show Detail
+                        </a>
+                    </ul>
+                </li>
+            <% })%>
+        </ol>
+    </main>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="flex navigation">
+            <a href='/'>
+            <h3>
+            BookStore
+           </h3>    
+            </a>
+            <a href='/books' class="button">
+            Show Books
+            </a>
+        </div>
+    </header>
+    <main>
+        <ol>
+            <ul class ="single-book-card">
+                <li><span class="heading">Title: </span><%= book.title %></li>
+                <li><span class="heading">Summary: </span><%= book.summary%></li>
+                <li><span class="heading">Publication: </span><%= book.publication %></li>
+                <li><span class="heading">Author: </span><%= book.authorId.name %></li>
+                <li><span class="heading">Category: </span><% book.category.forEach((category) => { %>
+                                                            <span class="tag"><%= category %></span>    
+                <% }) %></li>
+ 
+                <li>
+                    <a href ='/books/<%= book.id %>/edit' class = "button" style="margin-top: 1rem; display: inline-block;">
+                    Edit
+                    </a>
+                    <a href ='/books/<%= book.id %>/delete' class = "button" style="margin-top: 1rem; display: inline-block;">
+                    Delete
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ol>
+    </main>
+</body>
+</html>
