@@ -1,0 +1,203 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*************************** Custom Styles begins here ********************/
+html {
+    font-size: 16px;
+}
+body {
+    line-height: 1.5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color:  #059669;
+    color: #FDE68A;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #F87171;
+}
+.button {
+    border: 2px solid #7F1D1D;
+    padding: .5rem .8rem;
+    font-weight: 700;
+    border-radius: .5rem;
+    box-shadow: 1px 1px 4px rgb(75, 74, 74);
+    margin-right: .2rem;
+}
+.button:hover {
+    background-color: #7F1D1D;
+    color: #fff;
+}
+
+/**************** Flex ****************/
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-20 {
+    flex: 0 1 20%;
+}
+.flex-30 {
+    flex: 0 1 30%;
+}
+.flex-45 {
+    flex: 0 1 45%;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/************** Headings **************/
+h1, h2, h3, h4 {
+    font-weight: 700;
+}
+h1 {
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h4 {
+    font-size: 1.4rem;
+}
+
+/************** Header **************/
+.navigation {
+    background-color:#064E3B;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/************** Main **************/
+.book-card, .single-book-card {
+    padding: 1rem;
+    max-width: 30rem;
+    background-color: #312E81;
+    margin: 1rem auto;
+} 
+.single-book-card {
+    background-color: brown;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 5px grey;
+}
+.heading {
+    font-weight: 700;
+    color: rgb(175, 174, 174)
+}
+
+.form-container {
+    padding: 1rem;
+    border: .3rem double rgb(80, 79, 79);
+    max-width: 500px;
+    margin: 1rem auto;;   
+}
+input, button, textarea {
+    width: 100%;
+    padding: .5rem;
+    margin-bottom: 1rem;
+}
+button {
+    font-weight: 700;
+    background-color: #6EE7B7;
+    border: 0;
+    outline: 0;
+    border-radius: .5rem;
+    font-size: 1.1rem;
+    
+}
+button:hover {
+    background-color: #064E3B;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-box {
+    background-color: rgba(0, 0, 0, .2);
+    padding: 0 2rem;
+    padding-top: 1rem;
+    display: inline-block;
+    border-radius: .5rem;
+}
+.search-box input, .search-box button, select {
+    display: inline-block;
+    width: unset;
+    padding: .5rem .3rem;
+}
+select, .search-box input {
+    background-color: rgb(170, 170, 238);    
+    outline: 0;
+}
+.search-box input {
+    border: 2px solid blue;
+}
+
+.tag {
+    display: inline-block;
+    background-color: black;
+    padding: 0.5rem;
+    margin-right: .3rem;
+    margin-top: 0.2rem;
+    font-weight: 700;
+    color: rgb(5, 151, 5);
+}
+
+/************** Footer **************/
