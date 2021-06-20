@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="flex navigation">
+            <a href='/'>
+            <h3>
+            BookStore
+            </h3>    
+            </a>
+            <a href='/books' class="button">
+            Show Books
+            </a>
+        </div>
+    </header>
+    <main>
+        <h3>Add Book Form</h3>
+        <form action="/books" method="post" class="form-container">
+        <input type="text" name="title" id="title" placeholder = "Enter the title"> 
+        <textarea name="summary" id="summary" cols="30" rows="10" placeholder = "Enter the summary"></textarea>
+        <input type="number" name="pages" id="pages" placeholder="Enter the no. of pages">
+        <input type="text" name="publication" id="publication" placeholder=" Enter the publication name">
+        <textarea name="category" id="category" cols="30" rows="10"placeholder="Enter the categories"></textarea>
+        <input type="text" name="name" id="name" placeholder = "Enter the author name"> 
+        <input type="text" name="email" id="email" placeholder = "Enter the author email"> 
+        <input type="text" name="country" id="country" placeholder = "Enter the author country"> 
+        <input type="text" name="image-link"  id="image-link" placeholder="Enter image link">     
+        
+        <button type="submit">Add Book</button>
+        </form>
+    </main>
+</body>
+</html>
+
